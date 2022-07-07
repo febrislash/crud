@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block body %}
+  <div class='row'>
+    <div class='col-5 mx-auto'>
+      <h3>Edit user</h3><hr>
+      <form method='post' action='{{url_for("edit_user",id=datas.id)}}'>
+        <div class='form-group'>
+          <label>Nama Pelanggan</label>
+          <input type='text' name='nama' required class='form-control' value='{{datas.nama}}'>
+        </div>
+        <div class='form-group'>
+          <label>Alamat</label>
+          <input type='text' name='alamat' required class='form-control' value='{{datas.alamat}}'>
+        </div>
+        <div class='form-group'>
+            <label>No Telpon</label>
+            <input type='text' name='telpon' required class='form-control' value='{{datas.telpon}}'>
+          </div>
+          <div class='form-group'>
+            <label>Jumlah AC</label>
+            <input type='number' name='jumlah_ac' required class='form-control' value='{{datas.jumlah_ac}}'>
+          </div>
+          <div class='form-group'>
+            <label>Tanggal Service</label>
+            <input type='date' name='tanggal_service' required class='form-control' value='{{datas.tanggal_service}}'>
+          </div>
+        <input type='submit' value='Submit' class='btn btn-primary'>
+      </form>
+    </div>
+  </div>
+{% endblock %}
